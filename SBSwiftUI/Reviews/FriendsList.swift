@@ -13,7 +13,7 @@ struct FriendsList : View {
             List(userResponse) { user in
                 Cell(user: user)
             }
-            .navigationBarTitle(Text("Friends"))
+            .navigationBarTitle(Text("Reviews"))
         }
     }
 }

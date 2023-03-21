@@ -39,16 +39,16 @@ struct LittleStack: View {
     var body: some View {
         HStack(spacing: 30.0) {
             VStack {
-                Text("\(object.lessons)")
+                Text("\(object.rating.formatted(.number))")
                     .font(.title)
-                Text("Lessons")
+                Text("Рейтинг")
                     .font(.body)
                     .fontWeight(.medium)
             }
             VStack {
-                Text("\(object.students)")
+                Text("\(object.marks)")
                     .font(.title)
-                Text("Students")
+                Text("Оценок")
                     .font(.body)
                     .fontWeight(.medium)
             }
@@ -70,6 +70,7 @@ struct MainImage: View {
             .shadow(radius: 10)
     }
 }
+
 
 #if DEBUG
 struct DetailScreen_Previews : PreviewProvider {

@@ -19,18 +19,18 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List{
-                Cell(user: swiftbook).listRowInsets(EdgeInsets())
+                Cell(user: movies).listRowInsets(EdgeInsets())
                 ForEach(categories.keys.sorted(), id: \.self){
                     key in
-                    if key == "Courses" {
+                    if key == "Movies" {
                         CategoryRow(categoryName: key, items: self.categories[key]!)
-                    } else if key == "Webinars" {
+                    } else if key == "Series" {
                         WebinarRow(categoryName: key, items: self.categories[key]!)
                     }
                 }  .listRowInsets(EdgeInsets())
                     
                     NavigationLink(destination: FriendsList()) {
-                        Text("Teachers")
+                        Text("Reviews")
                             .font(.headline)
                     }
                 .navigationBarTitle(Text("Homepage"))

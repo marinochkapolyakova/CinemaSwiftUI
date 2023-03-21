@@ -79,7 +79,7 @@
 			children = (
 				E891978F29C5DA81009A3DA2 /* SBSwiftUIApp.swift */,
 				E8B15E6C29C9CFD000501232 /* HomeScreen */,
-				E8B15E6D29C9D00E00501232 /* Teachers */,
+				E8B15E6D29C9D00E00501232 /* Reviews */,
 				E8B15E6B29C9CFB900501232 /* Detail */,
 				E8B15E6E29C9D04300501232 /* Resourses */,
 				E8B15E6A29C9CF9700501232 /* Models */,
@@ -127,14 +127,14 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
-		E8B15E6D29C9D00E00501232 /* Teachers */ = {
+		E8B15E6D29C9D00E00501232 /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
 				E891979D29C5E477009A3DA2 /* TopView.swift */,
 				E8704CFA29C7687A00734611 /* Cell.swift */,
 				E871F2A329C9AD7C003716F0 /* FriendsList.swift */,
 			);
-			path = Teachers;
+			path = Reviews;
 			sourceTree = "<group>";
 		};
 		E8B15E6E29C9D04300501232 /* Resourses */ = {

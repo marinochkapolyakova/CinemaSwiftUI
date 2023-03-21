@@ -10,8 +10,8 @@ import UIKit
 import SwiftUI
 
 enum Category: String, CaseIterable, Codable, Hashable {
-    case courses = "Courses"
-    case webinars = "Webinars"
+    case movie = "Movies"
+    case series = "Series"
 }
 
 struct ProductsResponse: Hashable, Codable, Identifiable {
@@ -22,8 +22,6 @@ struct ProductsResponse: Hashable, Codable, Identifiable {
     var category: Category
     var description: String
     var rating: Double
-    var students: Int
-    var lessons: Int
-    var isFavorite: Bool
-    var isFeatured: Bool
+    var marks: Int
+   
 }
