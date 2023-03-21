@@ -22,21 +22,25 @@ struct ContentView: View {
                 Cell(user: swiftbook).listRowInsets(EdgeInsets())
                 ForEach(categories.keys.sorted(), id: \.self){
                     key in
-                    ProductRow(categoryName: key, items: self.categories[key]!)
-                }.listRowInsets(EdgeInsets())
-                           
+                    if key == "Courses" {
+                        CategoryRow(categoryName: key, items: self.categories[key]!)
+                    } else if key == "Webinars" {
+                        WebinarRow(categoryName: key, items: self.categories[key]!)
+                    }
+                }  .listRowInsets(EdgeInsets())
+                    
                     NavigationLink(destination: FriendsList()) {
                         Text("Teachers")
                             .font(.headline)
                     }
+                .navigationBarTitle(Text("Homepage"))
             }
-            .navigationBarTitle(Text("Homepage"))
         }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }

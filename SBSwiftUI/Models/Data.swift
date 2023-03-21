@@ -1,8 +1,9 @@
 //
 //  Data.swift
-//  SwiftUIFirstDemo
+//  SBSwiftUI
 //
-
+//  Created by marinapolyakova on 18.03.2023.
+//
 
 import Foundation
 

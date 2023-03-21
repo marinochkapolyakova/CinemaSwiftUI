@@ -1,6 +1,6 @@
 //
 //  UserResponse.swift
-//  SwiftUIFirstDemo
+//  SBSwiftUI
 //
 //  Created by marinapolyakova on 19.03.2023.
 //

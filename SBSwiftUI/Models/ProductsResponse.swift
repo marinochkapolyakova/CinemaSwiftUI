@@ -1,11 +1,12 @@
 //
 //  ProductsResponse.swift
-//  SwifbookApp
+//  SBSwiftUI
 //
-//  Created by marinapolyakova on 18.03.2023.
+//  Created by marinapolyakova on 21.03.2023.
 //
 
 import Foundation
+import UIKit
 import SwiftUI
 
 enum Category: String, CaseIterable, Codable, Hashable {
