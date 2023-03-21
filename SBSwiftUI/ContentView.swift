@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var categories: [String : [ProductsResponse]]{
+        .init(
+            grouping: materialResponse,
+            by: {$0.category.rawValue}
+        )
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List{
+                Cell(user: swiftbook).listRowInsets(EdgeInsets())
+                ForEach(categories.keys.sorted(), id: \.self){
+                    key in
+                    ProductRow(categoryName: key, items: self.categories[key]!)
+                }.listRowInsets(EdgeInsets())
+                           
+                    NavigationLink(destination: FriendsList()) {
+                        Text("Teachers")
+                            .font(.headline)
+                    }
+            }
+            .navigationBarTitle(Text("Homepage"))
         }
-        .padding()
     }
 }
 
